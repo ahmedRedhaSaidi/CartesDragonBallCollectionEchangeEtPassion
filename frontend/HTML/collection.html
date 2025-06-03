@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Personnages Dragon Ball</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,900;1,900&family=Bungee&family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/headerFooter.css">
+    <link rel="stylesheet" href="../CSS/tab.css">
+    <link rel="stylesheet" href="../CSS/carte.css">
+
+</head>
+<body>
+<div id="naveSide">
+    <div id="sideNav" class="side-nav d-flex justify-content-between">
+        <nav class="d-flex navItems">
+            <ul class="" id="nave">
+                <li class="li nav-item"><a class="a  s" href="../HTML/shop.html">Shop</a></li>
+                <li class="li nav-item"><a class="a  s" href="../HTML/collection.html">Collection</a></li>
+                <li class="li nav-item"><a class="a  s" href="../HTML/contact.html">Booster</a></li>
+                <li class="li nav-item" id="profil"><a class="a" href="../../backend/config/inscription.php">My profile</a></li>
+            </ul>
+        </nav>
+        <button id="toggleBtn" class="toggle-btn">☰</button>
+    </div>
+</div>
+
+<header class="d-flex justify-content-between" id="tete">
+    <img src="../Illustrations/logo/logosite.svg" alt="Logo of website King Kai" id="logo">
+    <nav class="d-flex">
+        <ul class="d-flex" id="nave">
+            <li class="li"><a class="a  s" href="../HTML/shop.html">Shop</a></li>
+            <li class="li"><a class="a  s" href="/HTML/collection.html">Collection</a></li>
+            <li class="li"><a class="a  s" href="/HTML/contact.html">Contacts</a></li>
+            <li class="li" id="profil"><a class="a" href="../../backend/config/login.php">My profile</a></li>
+        </ul>
+    </nav>
+</header>
+<button class="bouton-flottant" id="btn">+</button>
+<div class="message" id="message">
+    
+  <div class="box-formulaire">
+    <h2>Échangez vos objets !</h2>
+    <form action="#" method="post">
+      <label for="pseudo" class="champ-label">Nom complet :</label>
+      <input type="text" id="pseudo" name="pseudo" class="champ-input" required>
+
+      <label for="courriel" class="champ-label">Adresse e-mail :</label>
+      <input type="email" id="courriel" name="courriel" class="champ-input" required>
+
+      <label for="carteChar" class="champ-label">Objet souhaité :</label>
+      <input list="carteChar" id="carteChart" name="carteChart" class="champ-input" placeholder="Commencez à taper...">
+
+      <label for="carteChar" class="champ-label">Objet à échanger :</label>
+      <input list="carteChar" id="carteChart" name="carteChart" class="champ-input" placeholder="Commencez à taper...">
+
+      <datalist id="carteChar"></datalist>
+
+      <label for="infos" class="champ-label">Message complémentaire :</label>
+      <textarea id="infos" name="infos" class="champ-textarea" rows="4"></textarea>
+
+      <button type="submit" class="btn-valider">Envoyer</button>
+    </form>
+  </div>
+
+</div>
+<div class="mainCollection">
+    <section>
+        <div class="btnSMaison">
+            <button class="btnMaison actif" data-maison="all">Toutes</button>
+            <button class="btnMaison" data-maison="saiyan">Saiyan</button>
+            <button class="btnMaison" data-maison="android">Android</button>
+            <button class="btnMaison" data-maison="god">Dieux</button>
+            <button class="btnMaison" data-maison="angel">Ange</button>
+            <button class="btnMaison" data-maison="favorites">Favorites</button>
+        </div>
+    </section>
+
+    <div id="personnage-collection" class="collection">
+        <!-- Les cartes seront ajoutées ici dynamiquement avec JavaScript -->
+    </div>
+</div>
+<footer id="pied" class="d-flex justify-content-between"><!--debut du footer-->
+        <div><!--liste des moyen de nous contacter-->
+            <ul>
+                <li class="li footerTitle"><h2>CONTACTEZ-NOUS</h2></li>
+                <li class="li"><a class=" footerLink" href="">mail</a></li>
+                <li class="li"><a class=" footerLink" href="">telephone</a></li>
+                <li class="li"><a class=" footerLink" href="">whatapp</a></li>
+            </ul>
+        </div>
+        <div>
+            <ul><!--retour au menu-->
+                <li class="li footerTitle"><h2>MENU</h2></li>
+                <li class="li"><a class="  s  footerLink" href="/HTML/shop.html">Shop</a></li>
+                <li class="li"><a class="  s  footerLink" href="/HTML/collection.html">Collection</a></li>
+                <li class="li"><a class="  s  footerLink" href="/HTML/contact.html">Contacts</a></li>
+            </ul>
+        </div>
+        <div>
+            <div class="justify-content-between"><!--lien pour suivre ou contacter-->
+                <a class="a" href=""><img id="imgContact"  src="../Illustrations/logo/facebook.svg" alt="Facebook contact" srcset=""></a>
+                <a class="a" href=""><img id="imgContact" src="../Illustrations/logo/X (formerly Twitter)_dark.svg" alt="X contact" srcset=""></a>
+                <a class="a" href=""><img id="imgContact" src="../Illustrations/logo/linkedin.svg" alt="Linkdin Contact" srcset=""></a>
+                <a class="a" href=""><img id="imgContact" src="../Illustrations/logo/telegram.svg" alt="Telegram contact" srcset=""></a>
+            </div>
+            <div class="copy">
+                <p>Dragon ball hero – &copy; 2025 Tous droits réservés <br><!--mention legal et rgpd-->
+                    <a id="legal" href="">Mentions Légales | CGU |<br> Politique de Confidentialité | Politique de Cookies</a>
+                    </p>
+            </div>
+        </div>
+
+</footer>
+<script src="../JS/main.js"></script>
+<script src="../JS/carteid.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,212 @@
+* {
+    font-family: 'Bungee', sans-serif;
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+  }
+
+/*side nave*/
+#naveSide{
+    opacity: 0;
+}
+.side-nav {/* Barre latérale (cachée par défaut) */
+    width: 240px;
+    background:var(--colorsS);
+    color: white;
+    padding: 10px;
+    transform: translateX(-268px); /* Hors de l'écran */
+    transition: transform 0.3s ease-in;
+    height: 100vh;
+    position: fixed;
+    z-index: 999999; /* Toujours au premier plan */
+}
+.side-nav.open {/* Affichage de la barre lorsqu'elle est ouverte */
+    transform: translateX(0);
+}
+#nav-item {/* Alignement des éléments de navigation */
+    display: flex;
+    align-items: center;
+}
+.toggle-btn {/* Bouton de basculement */
+    transform: translateX(70px);
+    background: #fff;
+    border-radius: 50%; /* Bouton rond */
+    position: relative;
+    height: 35px;
+    width: 35px;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
+}
+ 
+
+/*fin de side nave*/
+/* début du header */
+#tete {
+    margin-bottom: 12.5rem; /* espacement en bas du header */
+}
+
+#logo {
+    margin: 0.625rem; /* espacement autour des images */
+    width: 2.1875rem; /* largeur fixe du logo */
+    height: 1.75rem; /* hauteur du logo */
+}
+
+#profil {
+    border-radius: 0.5rem; /* arrondi des coins */
+    background-color: #0061A8; /* couleur de fond */
+    padding: 1.125rem 1.25rem; /* espacement interne (haut/bas - gauche/droite) */
+    transition: transform 0.3s ease; /* effet de transition pour les interactions */
+}
+
+#profil:hover{
+    color: burlywood; /* couleur au survol */
+}
+
+#nave .li .a.s { 
+    display: flex; /* disposition flexible des éléments */
+    margin: 0.625rem 0; /* espacement vertical des liens */
+    padding-top: 0.9375rem; /* espacement interne en haut */
+    padding: 0.625rem; /* espacement interne général */
+    transition: transform 0.3s ease; /* effet de transition pour les interactions */
+}
+
+#nave .li .a.s:hover {
+    transform: scale(1.1); /* agrandissement au survol */
+    color: burlywood; /* changement de couleur au survol */
+}
+/* fin du header */
+
+
+
+/* début footer */
+
+/* style du footer */
+#pied {
+    width: 100%;
+    margin: 0;
+    border-top: solid rgba(0, 0, 0, 0.5); /* bordure supérieure pour le footer */
+    background-color: #0061A8; /* couleur de fond du footer */
+}
+
+/* style de l'image de contact dans le footer */
+#imgContact {
+    margin: 1.25rem; /* espacement autour de l'image */
+    width: 2.5rem; /* largeur de l'image */
+    height: auto; /* hauteur ajustée automatiquement pour conserver les proportions */
+}
+
+/* style du titre du footer */
+.footerTitle {
+    font-size: 1.4375rem; /* taille du texte pour le titre du footer */
+    margin: 0; /* aucune marge */
+    border-radius: 0.5rem; /* coins arrondis pour un effet plus doux */
+    color: #fff; /* couleur du texte en blanc */
+}
+
+/* style des liens du footer */
+.footerLink {
+    font-size: 1.25rem; /* taille du texte pour les liens du footer */
+    margin: 0.9375rem 0.625rem; /* marge verticale et horizontale */
+    color: #fff; /* couleur du texte en blanc */
+    text-decoration: none; /* pas de soulignement par défaut */
+}
+
+/* style pour le lien "legal" avec soulignement */
+#legal {
+    text-decoration: underline; /* soulignement du texte */
+    color: #fff; /* couleur du texte en blanc */
+}
+
+/* fin footer */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* flexbox */
+.d-flex {
+    display: flex; /* modèle de boîte flexible */
+}
+
+.flex-c {
+    flex-direction: column; /* direction en colonne */
+}
+
+.flex-b {
+    display: block; /* affiche les éléments en bloc */
+}
+
+.flex-n {
+    display: none; /* cache les éléments */
+}
+
+/* alignement */
+.justify-content-between {
+    justify-content: space-between; /* espace entre les éléments */
+}
+
+.justify-content-center {
+    justify-content: center; /* centre les éléments */
+}
+
+.justify-content-s-around {
+    justify-content: space-around; /* espace autour des éléments */
+}
+
+.text-center {
+    text-align: center; /* centre le texte horizontalement */
+}
+
+.align-items-center {
+    align-items: center; /* centre les éléments verticalement */
+}
+
+/* tailles */
+.w-50 {
+    width: 50%; /* largeur à 50% */
+    margin: 0 auto; /*centralisation*/
+}
+
+.w-80 {
+    width: 80%; /* largeur à 80% */
+    margin: 0 auto; /*centralisation*/
+}
+
+.mgTB {
+    margin-top: 5px; /* marge supérieure */
+    margin-bottom: 5px; /* marge inférieure */
+}
+
+
+/*fin des classe qui facilite le code*/
+
+
+/*retire les style*/
+.a{
+    text-decoration: none; /* supprime la décoration par défaut des liens */
+    color: black; /* couleur blanche pour le texte des liens */
+}
+
+.li{
+    list-style: none;
+}
+
+/*fin de retrait des style*/
+
+
+@media (max-width: 768px) {
+    #naveSide{
+        opacity: 1;
+    }
+}

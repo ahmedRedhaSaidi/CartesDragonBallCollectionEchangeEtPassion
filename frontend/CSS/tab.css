@@ -1,0 +1,34 @@
+
+
+/*Gestion des tabs*/
+.btnMaison{/*classe de chaque bouton*/
+    border: #fff;
+    background-color:var(--colorsS);
+    color: #0061A8;
+    padding: 10px;
+    border-radius: 2px;
+    transition:  0.3s ease-in;
+    margin: 10px;
+    transform: translateY(-45px);
+
+}
+.btnMaison:hover{
+    background-color: #0061A8;
+    color:var(--colorsS);
+}
+.btnSMaison {/* coverer des bouton */
+ display: flex;
+ justify-content: center;
+}
+.containerTabs{
+    display: none;
+}
+
+.containerTabs.actif{
+    display: block;
+}
+
+.btnMaison.actif{
+    background-color: #0061A8;
+    color:var(--colorsS);
+}

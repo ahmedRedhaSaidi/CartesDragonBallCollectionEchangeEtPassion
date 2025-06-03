@@ -1,0 +1,555 @@
+/*var colors et var image*/
+:root {
+    --bg-image-Rare: url('../Illustration/téléchargement\ \(4\).jpg');
+    --bg-image-Legend: url('../Illustration/téléchargement\ \(9\).jpg');
+    --bg-image-Special: url('../Illustration/téléchargement\ \(8\).jpg');
+    --bg-image-Commune: url('../Illustration/téléchargement\ \(7\).jpg');
+    --colorsP : #007bff;
+    --colorsS : #FFDD33;
+  }
+
+/*carte general*/
+.mainCollection{
+    padding: 15px;
+    width: 95%;
+    margin: 100px auto;
+
+    border: solid 5px #ffcc00;
+    border-radius: 8px;
+    
+}
+
+#personnage-collection {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.character-carte {
+
+    background-color: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+    position: relative;
+    height: 400px;  
+    padding: 5px;
+    border: solid 8px #FFDD33;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: apparition 0.5s ease-out forwards;
+}
+
+.carte-personnage {
+    max-width: 800px;
+    margin: 2rem auto;
+    background: linear-gradient(145deg, #1a1a2e 0%, #16213e 100%);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    color: #fff;
+    position: relative;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.bouton-favori {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+
+.bouton-favori:hover {
+    background: rgba(255, 0, 0, 0.3);
+    transform: scale(1.1);
+}
+
+.icone-favori {
+    width: 20px;
+    height: 20px;
+    filter: invert(1);
+}
+
+.contenu-principal {
+    display: flex;
+    padding: 2rem;
+    gap: 2rem;
+}
+
+.visuel-personnage {
+    position: relative;
+    flex: 1;
+    min-width: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.portrait-personnage {
+    width: 100%;
+    height: auto;
+    display: block;
+    z-index: 2;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.fond-personnage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(5px) brightness(0.5);
+    z-index: 1;
+}
+
+.details-personnage {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.titre-personnage {
+    font-size: 2.2rem;
+    margin: 0 0 1rem 0;
+    color: #ffd700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.grille-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.item-stat {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.8rem;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.item-stat.pleine-largeur {
+    grid-column: span 2;
+}
+
+.libelle-stat {
+    font-weight: bold;
+    color: #4fc3f7;
+}
+
+.valeur-stat {
+    text-align: right;
+}
+
+.valeur-ki {
+    color: #ff5252;
+}
+
+.valeur-kimax {
+    color: #ff7043;
+}
+
+.valeur-race {
+    color: #69f0ae;
+}
+
+.valeur-genre {
+    color: #ff80ab;
+}
+
+.valeur-affiliation {
+    color: #b388ff;
+}
+
+.biographie {
+    padding: 0 2rem 2rem 2rem;
+}
+
+.titre-bio {
+    font-size: 1.5rem;
+    color: #ffd700;
+    margin-bottom: 0.5rem;
+    border-bottom: 2px solid rgba(255, 215, 0, 0.3);
+    padding-bottom: 0.5rem;
+}
+
+.texte-bio {
+    line-height: 1.6;
+    text-align: justify;
+    margin: 0;
+}
+
+/* Design responsive */
+@media (max-width: 768px) {
+    .contenu-principal {
+        flex-direction: column;
+    }
+    
+    .grille-stats {
+        grid-template-columns: 1fr;
+    }
+    
+    .item-stat.pleine-largeur {
+        grid-column: span 1;
+    }
+}.carte-personnage {
+    max-width: 800px;
+    margin: 2rem auto;
+    background: linear-gradient(145deg, #1a1a2e 0%, #16213e 100%);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    color: #fff;
+    position: relative;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.bouton-favori {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+
+.bouton-favori:hover {
+    background: rgba(255, 0, 0, 0.3);
+    transform: scale(1.1);
+}
+
+.icone-favori {
+    width: 20px;
+    height: 20px;
+    filter: invert(1);
+}
+
+.contenu-principal {
+    display: flex;
+    padding: 2rem;
+    gap: 2rem;
+}
+
+.visuel-personnage {
+    position: relative;
+    flex: 1;
+    min-width: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.portrait-personnage {
+    width: 100%;
+    height: auto;
+    display: block;
+    z-index: 2;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.fond-personnage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(5px) brightness(0.5);
+    z-index: 1;
+}
+
+.details-personnage {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.titre-personnage {
+    font-size: 2.2rem;
+    margin: 0 0 1rem 0;
+    color: #ffd700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.grille-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.item-stat {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.8rem;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.item-stat.pleine-largeur {
+    grid-column: span 2;
+}
+
+.libelle-stat {
+    font-weight: bold;
+    color: #4fc3f7;
+}
+
+.valeur-stat {
+    text-align: right;
+}
+
+.valeur-ki {
+    color: #ff5252;
+}
+
+.valeur-kimax {
+    color: #ff7043;
+}
+
+.valeur-race {
+    color: #69f0ae;
+}
+
+.valeur-genre {
+    color: #ff80ab;
+}
+
+.valeur-affiliation {
+    color: #b388ff;
+}
+
+.biographie {
+    padding: 0 2rem 2rem 2rem;
+}
+
+.titre-bio {
+    font-size: 1.5rem;
+    color: #ffd700;
+    margin-bottom: 0.5rem;
+    border-bottom: 2px solid rgba(255, 215, 0, 0.3);
+    padding-bottom: 0.5rem;
+}
+
+.texte-bio {
+    line-height: 1.6;
+    text-align: justify;
+    margin: 0;
+}
+
+
+  /* Animation de fade + montée */
+  @keyframes apparition {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .character-carte.active{
+    animation: rotation 0.6s ease-in forwards;
+    opacity: 100%;
+  }
+
+
+
+  @keyframes rotation {
+    0% {
+      transform: rotateY(0deg);
+    }
+    to {
+      transform: rotateY(720deg);
+    }
+  }
+  
+  
+  /* Délais progressifs pour chaque carte */
+  .character-carte:nth-child(1) {
+    animation-delay: 0s;
+  }
+  .character-carte:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  .character-carte:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+  .character-carte:nth-child(4) {
+    animation-delay: 0.6s;
+  }
+
+
+.image-container {
+    
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.character-info {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0%;
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.65);
+    color: white;
+    padding: 5px;
+    text-align: center;
+    backdrop-filter: blur(5px); /* pour un effet plus "glass" */
+    scale: 0.8;
+    
+}
+
+
+.character-info h3 {
+    margin: 0 0 8px;
+    font-size: 1.3em;
+    color: #ffcc00;
+    scale: 0.8;
+}
+
+.character-info p {
+    margin: 4px 0;
+    font-size: 0.95em;
+    color: #eaeaea;
+    scale: 0.8;
+}
+
+
+/*fav bouton*/
+
+.btnFav{
+
+    transition: filter 0.3s ease-in-out; /* Animation fluide */
+    transition: transform 0.3s ease-in-out; /* Animation fluide */
+    width: auto;
+    height: auto;
+  }
+  .btnFav :hover{
+      cursor: all-scroll;
+   }
+  .btnFav.actif{
+      filter: brightness(0) saturate(100%) invert(21%) sepia(87%) saturate(7464%) hue-rotate(358deg) brightness(102%) contrast(112%);
+      
+  }
+  
+  .descriptionCard{
+      margin: 122% 3% 0% 3% ;
+  }
+  .favBtn{
+      height:auto;
+      width: 45px;
+      background-color: #fff;
+      border: none;
+  }
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* style des images de carte */
+.img-carte {
+    height: 27.25rem; /* hauteur fixe de l'image */
+    width: 17.8125rem; /* largeur fixe de l'image */
+    border-radius: 0.5rem; /* coins arrondis */
+    border: solidvar(--colorsS) 0.3125rem; /* bordure jaune de 0.3125rem */
+}
+.carte#gokuDaima{
+    background-image: url(../Illustrations/carteIllustrastion/Daima/GOKU\ DAIMA\ _\ DRAGON\ BALL.jpeg);
+    background-size: cover;
+}
+
+/* conteneur des cartes */
+.containeurCarte {
+    position: static; /* position par défaut */
+    display: inline-block; /* affichage en ligne avec gestion des dimensions */
+    transition: transform 0.3s ease-in; /* animation fluide lors du survol */
+}
+
+/* effet au survol : la carte grandit légèrement */
+.containeurCarte:hover {
+    transform: scale(1.1); /* zoom à 110% */
+}
+
+/* zone de texte sur la carte */
+.texteCarte {
+    position: static; /* position par défaut */
+    transform: translate(3%, -11.25rem); /* déplacement vers le haut */
+    background-color:var(--colorsS); /* fond jaune */
+    color: white; /* texte blanc */
+    width: 90%; /* largeur de 90% du conteneur parent */
+    border-radius: 0.5rem; /* coins arrondis */
+    padding: 2%; /* espacement intérieur */
+    margin-bottom: -11.25rem; /* décalage pour le positionnement */
+}
+
+/* style pour le texte de capacité */
+.CapaciteCarte {
+    font-weight: 600; /* texte en gras */
+    color: #0061A8; /* couleur bleue */
+}
+
+/* titre de la carte */
+.titreCarte {
+    font-size: 1.5rem; /* taille de police */
+    position: static; /* position par défaut */
+    transform: translate(3%, -9.375rem); /* déplacement du titre */
+    color: white; /* texte en blanc */
+    width: 90%; /* largeur de 90% du parent */
+    border-radius: 0.5rem; /* coins arrondis */
+    padding: 2%; /* espacement intérieur */
+    text-align: center; /* alignement du texte au centre */
+}
+
+/* conteneur principal de la présentation de la carte */
+#PresCarteContainer {
+    margin: 0.625rem; /* marge externe */
+    padding: 0.625rem; /* espacement intérieur */
+    width: 18.75rem; /* largeur fixe */
+    box-shadow: 0.625rem 0.625rem 1.25rem rgba(0, 0, 0, 0.3); /* Ombre portée */
+    border-radius: 0.5rem; /* coins arrondis */
+    transition: transform 0.3s ease; /* animation fluide */
+}
+
+/* effet au survol : agrandissement du conteneur */
+#PresCarteContainer:hover {
+    transform: scale(1.2); /* zoom à 120% */
+}

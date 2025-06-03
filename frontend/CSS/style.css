@@ -1,0 +1,701 @@
+/*var colors et var image*/
+:root {
+    --bg-image-Rare: url('../Illustration/téléchargement\ \(4\).jpg');
+    --bg-image-Legend: url('../Illustration/téléchargement\ \(9\).jpg');
+    --bg-image-Special: url('../Illustration/téléchargement\ \(8\).jpg');
+    --bg-image-Commune: url('../Illustration/téléchargement\ \(7\).jpg');
+    --colorsP : #007bff;
+    --colorsS : #FFDD33;
+  }
+  body{
+    
+    background-image: url(../Illustrations/Background/téléchargement\ \(4\).jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* optionnel - fixe l'image lors du défilement */
+    margin: 0;
+    min-height: 100vh;
+  
+    
+    
+  }
+  
+* {
+    font-family: 'Bungee', sans-serif;
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+  }
+
+/****************************************************Profil*******************************************************/
+
+
+.logout-btn:hover {
+    background: #0d47a1;
+}
+
+a {
+    text-decoration: none;
+    color: #1e88e5;
+    margin: 10px;
+    display: inline-block;
+    transition: color 0.3s, transform 0.2s;
+}
+
+.character-link{
+    text-decoration: none;
+}
+
+a:hover {
+    color: #0d47a1;
+    transform: scale(1.05);
+}
+
+
+
+
+/*page de contact*/
+
+#checkbox-container {
+    display: flex;
+    flex-direction: column; /* Place les éléments verticalement */
+    gap: 10px; /* Ajoute un espacement entre les checkboxes */
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center; /* Aligne le texte verticalement avec la checkbox */
+    gap: 10px; /* Ajoute un espace entre la checkbox et le texte */
+}
+
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px; /* Taille de la checkbox */
+    cursor: pointer; /* Ajoute un curseur pointer pour un effet interactif */
+}
+
+
+.in.inputError{
+    background-color: #F28C8C;
+    border: solid red 3px;
+
+}
+.in.inputCorrect{
+    background-color: #A8D5BA;
+    border: solid green 3px;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    margin-bottom: 100px ;
+    padding: 30px;
+}
+
+.in{
+    width: 300px;
+    height: 50px;
+    border-radius: 10px;
+    border: solid 2px black;
+}
+.btnCo{
+
+    padding: 10px;
+    background-color: var(--colorsP);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.coin {
+    margin-right: 20px ;
+    all: unset; /* Réinitialise tout le style par défaut */
+    display: inline-block; /* Optionnel, rétablit le flux si nécessaire */
+    cursor: pointer; /* Ajoute le curseur pointer pour les boutons */
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+ 
+/*fin de side nave*/
+/* début du header */
+#tete {
+    margin-bottom: 12.5rem; /* espacement en bas du header */
+}
+
+#logo {
+    margin: 0.625rem; /* espacement autour des images */
+    width: 2.1875rem; /* largeur fixe du logo */
+    height: 1.75rem; /* hauteur du logo */
+}
+
+#profil {
+    border-radius: 0.5rem; /* arrondi des coins */
+    background-color: #0061A8; /* couleur de fond */
+    padding: 1.125rem 1.25rem; /* espacement interne (haut/bas - gauche/droite) */
+    transition: transform 0.3s ease; /* effet de transition pour les interactions */
+}
+
+#profil:hover{
+    color: burlywood; /* couleur au survol */
+}
+
+#nave .li .a.s { 
+    display: flex; /* disposition flexible des éléments */
+    margin: 0.625rem 0; /* espacement vertical des liens */
+    padding-top: 0.9375rem; /* espacement interne en haut */
+    padding: 0.625rem; /* espacement interne général */
+    transition: transform 0.3s ease; /* effet de transition pour les interactions */
+}
+
+#nave .li .a.s:hover {
+    transform: scale(1.1); /* agrandissement au survol */
+    color: burlywood; /* changement de couleur au survol */
+}
+/* fin du header */
+
+/*page collection*/
+
+
+
+
+
+
+
+
+
+
+/*bouton flottant*/
+.bouton-flottant {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 28px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background-color 0.3s;
+    z-index: 1000;
+  }
+
+  .bouton-flottant:hover {
+    background-color: #0056b3;
+  }
+
+  .message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    background: var(--colorsP);
+    width: 60%;
+    height: 80%;
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    display: none;
+    z-index: 1001;
+    
+}
+.visible {
+    display: block ;
+  }
+
+  /*formulaire d'echange*/
+      .box-formulaire {
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      top: 50%;
+      left: 50%;
+      margin: 0;
+
+    }
+
+    .box-formulaire h2 {
+      text-align: center;
+      color: #2c3e50;
+    }
+
+    .champ-label {
+      display: block;
+      color: #34495e;
+      font-weight: bold;
+    }
+
+    .champ-input, .champ-textarea {
+      width: 100%;
+      border: 1px solid #bdc3c7;
+      border-radius: 12px;
+      padding: 10px;
+    }
+
+
+    .btn-valider {
+      margin-top: 25px;
+      width: 100%;
+      padding: 12px;
+      background-color: #2980b9;
+      color: #ffffff;
+      border: none;
+      border-radius: 12px;
+      font-size: 17px;
+      cursor: pointer;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    .btn-valider:hover {
+      background-color: #1f6391;
+    }
+
+/*fin de page collection*/
+/*debut de la landing page*/
+
+/* début de la première section */
+#rappel {
+    padding: 0.3125rem 1.25rem; /* espacement interne */
+    background-color: whitesmoke; /* couleur de fond */
+    margin: 0.625rem 0; /* espacement vertical */
+    border-radius: 0.3125rem; /* arrondi des coins */
+}
+
+#acceShop {
+    
+    
+    background-color: #0061A8; /* couleur de fond */
+    margin: 0rem 2.5rem; /* espacement externe */
+    border-radius: 0.3125rem; /* arrondi des coins */
+    
+} 
+#acceShop a{
+    padding-top:20px;
+    margin: auto;
+}
+
+#offre {
+   
+    background-color: #0061A8; /* couleur de fond */
+    border-radius: 0.5rem; /* arrondi des coins */
+    width: 40rem; /* largeur fixe */
+    height: 5rem; /* hauteur fixe */
+    display: flex; /* disposition flexible */
+    margin: auto; /* centrage automatique */
+    font-size: 1.5625rem; /* taille du texte */
+    font-weight: 100; /* poids de la police */
+}
+#offre h3{
+    margin: auto; /* centrage automatique */
+    font-size: 1.5625rem; /* taille du texte */
+    font-weight: 100; /* poids de la police */
+}
+
+#swipeContainer {
+    width: 50%; /* largeur relative */
+    height: 37.5rem; /* hauteur fixe */
+    margin-top: 1.875rem; /* espacement supérieur */
+}
+/*swiper*/
+.swiper {
+    width: 240px;
+    height: 320px;
+  }
+
+  .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+  }
+
+
+
+.swiper {
+    width: 40%;
+    height: 70%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+/*fin swiper*/
+
+#titreContainer {
+    margin: 6.25rem; /* espacement externe */
+}
+
+#titreContainer h1 {
+    text-align: center; /* alignement du texte */
+    font-size: 3.125rem; /* taille du texte */
+}
+
+#titreContainer h3 {
+    font-size: 1.5625rem; /* taille du texte */
+}
+
+#titreContainer p {
+    font-size: 1.125rem; /* taille du texte */
+}
+
+#secUN {
+    background-color: #FFEE99; /* couleur de fond */
+    padding: 6.25rem; /* espacement interne */
+}
+/* fin de la première section */
+
+
+/* début de la deuxième section */
+.offreContainer {
+    width: 18.75rem; /* largeur fixe */
+    height: 15.625rem; /* hauteur fixe */
+    background-color:var(--colorsS); /* couleur de fond */
+    border-radius: 0.9375rem; /* arrondi des coins */
+    padding: 0.625rem; /* espacement interne */
+    text-align: center; /* alignement du texte */
+    transform: translateY(-3.125rem); /* translation verticale */
+    transition: transform 0.3s ease; /* effet de transition */
+}
+
+.offreContainer h3 {
+    font-size: 1.5rem; /* taille du texte */
+}
+
+.offreContainer p {
+    font-size: 1.1rem; /* taille du texte */
+}
+
+.offreContainer:hover {
+    transform: scale(1.05); /* agrandissement au survol */
+}
+
+#commandez {
+    width: 10rem; /* largeur fixe */
+    height: 2.5rem; /* hauteur fixe */
+    background-color: #0061A8; /* couleur de fond */
+    border-radius: 0.4375rem; /* arrondi des coins */
+    border: #0061A8; /* bordure de même couleur que le fond */
+    color: #fff; /* couleur du texte */
+    text-align: center; /* alignement du texte */
+    margin: 0.625rem 3.75rem 3.75rem 4.375rem; /* marges externes */
+}
+/* fin de la deuxième section */
+
+
+/* début de la troisième section */
+
+
+
+/* section contenant les cartes */
+#secTrois {
+    background-image: url(../Illustrations/Background/nuage.svg); /* Image de fond */
+    resize: none; /* empêche le redimensionnement */
+    background-repeat: no-repeat; /* ne pas répéter l'image */
+    background-position: center 15.625rem; /* position de l'image de fond */
+    transition: background-position 2s ease-in-out; /* animation fluide du fond */
+}
+
+/* effet au survol : déplacement de l'image de fond */
+#secTrois:hover {
+    background-position: 156.25rem 15.625rem; /* déplacement de l'image en X */
+}
+
+/* fin de la troisième section */
+
+
+/* début de la 4ème section */
+
+/* conteneur principal des éléments de la section */
+.ExContaineur {
+    width: 37.5rem; /* largeur du conteneur */
+    height: 15.625rem; /* hauteur du conteneur */
+    background-color: #0061A8; /* fond bleu */
+    text-align: center; /* centrage du texte à l'intérieur */
+    padding: 1.5625rem; /* espacement intérieur pour ne pas coller les bords */
+    margin: 1.5625rem; /* marge extérieure pour espacer l'élément des autres */
+    border-radius: 0.625rem; /* coins arrondis pour un effet plus doux */
+}
+
+/* style spécifique pour le conteneur avec l'ID "one" */
+.ExContaineur#one {
+    margin: 0 6.25rem 6.25rem 55%; /*marge */
+}
+
+/* style général des logos des partenaires */
+.LogoPartenaire {
+    margin-top: 1.25rem; /* espacement du haut pour éviter que le logo touche d'autres éléments */
+    width: 9.375rem; /* taille fixe du logo */
+    height: auto; /* ajustement automatique de la hauteur pour conserver les proportions */
+}
+
+/* style spécifique pour le logo ayant l'ID "tcg" */
+.LogoPartenaire#tcg {
+    border-radius: 100%; /* applique une forme parfaitement circulaire au logo */
+}
+
+/* fin de la 4ème section */
+
+
+
+/* début footer */
+
+/* style du footer */
+#pied {
+    width: 100%;
+    margin: 0;
+    border-top: solid rgba(0, 0, 0, 0.5); /* bordure supérieure pour le footer */
+    background-color: #0061A8; /* couleur de fond du footer */
+}
+
+/* style de l'image de contact dans le footer */
+#imgContact {
+    margin: 1.25rem; /* espacement autour de l'image */
+    width: 2.5rem; /* largeur de l'image */
+    height: auto; /* hauteur ajustée automatiquement pour conserver les proportions */
+}
+
+/* style du titre du footer */
+.footerTitle {
+    font-size: 1.4375rem; /* taille du texte pour le titre du footer */
+    margin: 0; /* aucune marge */
+    border-radius: 0.5rem; /* coins arrondis pour un effet plus doux */
+    color: #fff; /* couleur du texte en blanc */
+}
+
+/* style des liens du footer */
+.footerLink {
+    font-size: 1.25rem; /* taille du texte pour les liens du footer */
+    margin: 0.9375rem 0.625rem; /* marge verticale et horizontale */
+    color: #fff; /* couleur du texte en blanc */
+    text-decoration: none; /* pas de soulignement par défaut */
+}
+
+/* style pour le lien "legal" avec soulignement */
+#legal {
+    text-decoration: underline; /* soulignement du texte */
+    color: #fff; /* couleur du texte en blanc */
+}
+
+/* fin footer */
+
+
+
+/*classe facilite le code*/
+
+/* flexbox */
+.d-flex {
+    display: flex; /* modèle de boîte flexible */
+}
+
+.flex-c {
+    flex-direction: column; /* direction en colonne */
+}
+
+.flex-b {
+    display: block; /* affiche les éléments en bloc */
+}
+
+.flex-n {
+    display: none; /* cache les éléments */
+}
+
+/* alignement */
+.justify-content-between {
+    justify-content: space-between; /* espace entre les éléments */
+}
+
+.justify-content-center {
+    justify-content: center; /* centre les éléments */
+}
+
+.justify-content-s-around {
+    justify-content: space-around; /* espace autour des éléments */
+}
+
+.text-center {
+    text-align: center; /* centre le texte horizontalement */
+}
+
+.align-items-center {
+    align-items: center; /* centre les éléments verticalement */
+}
+
+/* tailles */
+.w-50 {
+    width: 50%; /* largeur à 50% */
+    margin: 0 auto; /*centralisation*/
+}
+
+.w-80 {
+    width: 80%; /* largeur à 80% */
+    margin: 0 auto; /*centralisation*/
+}
+
+.mgTB {
+    margin-top: 5px; /* marge supérieure */
+    margin-bottom: 5px; /* marge inférieure */
+}
+
+
+/*fin des classe qui facilite le code*/
+
+/*retire les style*/
+.a{
+    text-decoration: none; /* supprime la décoration par défaut des liens */
+    color: black; /* couleur blanche pour le texte des liens */
+}
+
+.li{
+    list-style: none;
+}
+
+/*fin de retrait des style*/
+
+
+
+@media (max-width: 768px) {
+    #acceShop {
+        padding: 0.5rem 1rem; /* réduit l'espacement interne */
+        margin: 1rem 0.5rem; /* réduit les marges */
+    }
+    
+    #offre {
+        padding: 0;/* retire l'espacement interne */
+        width: 15rem; /* réduit encore la largeur */
+        font-size: 1.125rem; /* réduit la taille de la police */
+    }
+    
+    #swipeContainer {
+        width: 90%; /* prend presque toute la largeur */
+        height: 25rem; /* réduit la hauteur */
+    }
+    
+    #titreContainer {
+        margin: 2.5rem; /* réduit les marges */
+    }
+    
+    #titreContainer h1 {
+        font-size: 2rem; /* réduit la taille du titre */
+    }
+    
+    #titreContainer h3 {
+        font-size: 1.25rem; /* réduit la taille du sous-titre */
+    }
+    
+    #titreContainer p {
+        font-size: 0.875rem; /* réduit la taille du paragraphe */
+    }
+    
+    #secUN {
+        padding: 4rem; /* réduit l'espacement interne */
+    }
+    #telun{
+        display: block;/* retire le display flex */
+    }
+
+    .offreContainer {
+        width: 100%; /* prend toute la largeur */
+        height: 12rem; /* réduit la hauteur */
+        transform: translateY(0); /* retire la translation verticale */
+    }
+
+    .offreContainer h3 {
+        font-size: 1.375rem; /* réduit la taille du titre */
+    }
+
+    .offreContainer p {
+        font-size: 0.875rem; /* réduit la taille du texte */
+    }
+
+    #commandez {
+        width: 8rem; /* réduit la largeur */
+        height: 2rem; /* réduit la hauteur */
+        margin: 0.625rem auto 1.5rem auto; /* centrage horizontal */
+    }
+
+    #teldeux{
+        display: block;/*retire le display flex */
+    }
+
+    .ExContaineur{
+        width: 90%; /* prend toute la largeur disponible */
+        height: 8rem; /* réduit la hauteur du conteneur */
+        padding: 0.5rem; /* réduit l'espacement intérieur */
+        font-size: 0.875rem; /* réduit la taille de la police */
+    }
+
+    .ExContaineur#one {
+        margin: 0 0px ; /* ajuste les marges pour un meilleur positionnement */
+        height: 180px;
+    }
+    .ExContaineur#two {
+        margin: 10px 0px; /* ajuste les marges pour un meilleur positionnement */
+    }
+
+    .LogoPartenaire {
+        width: 4rem; /* réduit la taille des logos */
+    }
+    #PresCartecoverer{
+        font-size: x-small;/*reduit la taille*/
+    }
+    .footerTitle {
+        font-size: 0.875rem; /* réduit la taille du titre sur très petit écran */
+    }
+
+    .footerLink {
+        font-size: 0.875rem; /* réduit la taille des liens sur très petit écran */
+        margin: 0.5rem 0.25rem; /* réduit encore les marges des liens */
+    }
+
+    #legal {
+        display: none;
+    }
+    .copy{
+        display: none;
+    }
+    header {
+        opacity: 0;
+    }
+
+    .containerLigne{
+        display: block;
+    }
+    #secTrois {
+        display: block;
+    }
+    .btnSMaison{
+        scale: (0.8);
+    }
+    .btnMaison{
+        font-size: 9px;
+    }
+}
